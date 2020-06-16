@@ -7,10 +7,10 @@
 <body>
 	<h2>ユーザ登録</h2>
 	<form action="finished.html" th:action="@{/ex04/ex04-result}"  method="post" th:object="${userForm}">
-		名前：<input type="text" name="name" th:field="*{name}"><br>
-		年齢：<input type="text" name="age" th:field="*{age}"><br>
+		名前：<input type="text" name="name" th:field="*{name}"　required><br>
+		年齢：<input type="text" name="age" th:field="*{age}"　required><br>
 		コメント：
-		<textarea row="6" col="30" name="comment" th:field="*{comment}"></textarea><br>
+		<textarea row="6" col="30" name="comment" th:field="*{comment}"　required></textarea><br>
 		<button>登録</button>
 	</form>
 
