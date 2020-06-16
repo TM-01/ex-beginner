@@ -15,9 +15,10 @@ public class Exam03Controller {
 	
 	@RequestMapping("/ex03-result")
 	public String result(String num1, String num2, String num3, Model model) {
-		model.addAttribute("num1", Integer.parseInt(num1));
-		model.addAttribute("num2", Integer.parseInt(num2));
-		model.addAttribute("num3", Integer.parseInt(num3));
+		int sum=Integer.parseInt(num1)+Integer.parseInt(num2)+Integer.parseInt(num3);
+		int tax =(int) (sum*1.1);
+		model.addAttribute("sum", (String.format("%,d", sum)));
+		model.addAttribute("tax", (String.format("%,d", tax)));
 		
 		return "exam03-result";
 	}
